@@ -1,5 +1,5 @@
 variables:
-    KUBE_CONTEXT: netcon2/edgex:edgex-connection
+    KUBE_CONTEXT: netcon2/edgex-connection:edgex-connection
     CI_PROJECT_DIR: k8s
 
 stages:
