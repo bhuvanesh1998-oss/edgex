@@ -8,11 +8,8 @@ build_image:
     services:
         - docker:20.10.16-dind
     before_script:
-        - docker login -u bhuvaneshnexn -p bhuvanesh1998
+        - docker login -u bhuvaneshnexn -p bhuvanesh1998 registry.gitlab.com
     script:
-        - docker build -t bhuvaneshnexn/demo .
-        - docker push bhuvaneshnexn/demo
+        - docker build -t registry.gitlab.com/netcon2/edgex-data/ .
+        - docker push registry.gitlab.com/netcon2/edgex-data/
         
-script:
-- docker build -t $CI_REG/netcon2/k8s-data/web .
-- docker push $CI_REG/netcon2/k8s-data/web
