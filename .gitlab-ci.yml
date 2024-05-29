@@ -1,3 +1,7 @@
+variables:
+    KUBE_CONTEXT: netcon2/edgex:edgex-connection
+    CI_PROJECT_DIR: k8s
+
 stages:
   - build
   - deploy
@@ -13,3 +17,17 @@ build_image:
         - docker build -t registry.gitlab.com/netcon2/edgex-data .
         - docker push registry.gitlab.com/netcon2/edgex-data
         
+deploy_server:
+    stage: deploy
+    image:
+       name: bitnami/kubectl:latest
+       entrypoint: ['']
+    script:
+        - kubectl config use-context $KUBE_CONTEXT
+        - kubectl get pods
+        - kubectl get node -o wide
+        - kubectl apply -f $CI_PROJECT_DIR/svc.yaml
+        - kubectl apply -f $CI_PROJECT_DIR/secret.yaml
+        - kubectl apply -f $CI_PROJECT_DIR/pod.yaml
+        - kubectl get pod
+        - kubectl get svc
