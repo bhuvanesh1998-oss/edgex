@@ -1,0 +1,18 @@
+stages:
+  - build
+  - deploy
+
+build_image:
+    stage: build
+    image: docker:20.10.16
+    services:
+        - docker:20.10.16-dind
+    before_script:
+        - docker login -u bhuvaneshnexn -p bhuvanesh1998
+    script:
+        - docker build -t bhuvaneshnexn/demo .
+        - docker push bhuvaneshnexn/demo
+        
+script:
+- docker build -t $CI_REG/netcon2/k8s-data/web .
+- docker push $CI_REG/netcon2/k8s-data/web
