@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background: url("https://static-prod.adweek.com/wp-content/uploads/2019/03/5g-page-reverse-2019.gif");
+  /* background: url('https://i.gifer.com/McIj.gif'); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+}
+
+.logo {
+  height: 35;
+  display: flex;
+  margin-top: 20px;
+  justify-content: flex-start;
+}
+
+.logo img {
+  margin-top: 0;
+  height: 60px;
+}
+
+nav {
+  background: transparent;
+}
+
+nav ul {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+nav li {
+  height: 50px;
+}
+
+nav a {
+  margin-top: 20px;
+  height: 100%;
+  padding: 0 30px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: serif;
+}
+
+nav li:first-child {
+  margin-right: auto;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  z-index: 999;
+  background-color: rgba(28, 31, 218, 0.411);
+  backdrop-filter: blur(30px);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.sidebar li {
+  width: 100%;
+}
+
+.sidebar a {
+  width: 100%;
+}
+
+.menu-button {
+  display: none;
+}
+
+.menu-button svg {
+  fill: white;
+}
+
+@media (max-width: 500px) {
+  .hide {
+    display: none;
+  }
+  .menu-button {
+    display: block;
+  }
+}
+
+@media (max-width: 400px) {
+  .sidebar {
+    width: 100%;
+  }
+}
+
+.popup {
+  /* background-color: #1998e7; Change to your desired color */
+  background-color:black;
+  padding: 20px;
+  border-radius: 10px;
+  border-color: black;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  width: 250px;
+  align-items: center;
+  justify-content: center;
+  background-position: center;
+  position: absolute; /* Set position to absolute */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Center horizontally and vertically */
+  /* margin-top: 300px; Adjust margin-top as needed */
+  display: none;
+}
+
+/* .card {
+            
+            background-color:#87CEFA;
+            padding: 20px;
+            border-radius: 10px;
+            border-color: black;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            align-items: center;
+            justify-content: center;
+            background-position: center;
+        } */
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 30px;
+  font-family: serif;
+  color: white;
+  /* font-family: "Sedan SC", serif; */
+  /* font-family: "Jacquard 24 Charted", system-ui; */
+  /* font-family: "Bungee Spice", sans-serif;
+  font-weight: 400;
+  font-style: normal; */
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid white;
+  border-radius: 5px;
+  background-color: white;
+  color: black;
+  border-color: black;
+  font-size: 15px;
+}
+
+button {
+  background-color: green;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 30px;
+  font-family: "Jersey 15", sans-serif;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+
