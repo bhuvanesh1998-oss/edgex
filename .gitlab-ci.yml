@@ -31,5 +31,6 @@ deploy_server:
         - kubectl apply -f $CI_PROJECT_DIR/secret.yaml
         - kubectl apply -f $CI_PROJECT_DIR/pod.yaml
         - kubectl get pod
-        - kubectl get svc
         - kubectl describe pod demo
+        - kubectl get svc
+        
