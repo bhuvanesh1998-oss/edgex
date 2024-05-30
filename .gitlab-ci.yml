@@ -15,7 +15,8 @@ build_image:
         - docker login -u nexncommunication2022 -p Netcon@123 registry.gitlab.com
     script:
         - docker build -t registry.gitlab.com/netcon2/edgex-data .
-        - docker push registry.gitlab.com/netcon2/edgex-data
+     #   - docker push registry.gitlab.com/netcon2/edgex-data
+        - docker push registry.gitlab.com/netcon2/edgex-data:latest
         
 deploy_server:
     stage: deploy
