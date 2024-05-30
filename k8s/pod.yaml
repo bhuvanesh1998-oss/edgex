@@ -12,4 +12,6 @@ spec:
     resources: {}
   dnsPolicy: ClusterFirst
   restartPolicy: Always
+  imagePullSecrets:
+     - name: demo
 status: {}
