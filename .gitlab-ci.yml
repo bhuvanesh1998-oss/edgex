@@ -33,4 +33,5 @@ deploy_server:
         - kubectl get pod
         - kubectl describe pod demo
         - kubectl get svc
+        - kubectl describe pod demo
         
